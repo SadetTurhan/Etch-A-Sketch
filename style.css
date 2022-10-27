@@ -17,20 +17,18 @@
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    gap: 0.3em;
-    grid-auto-rows: minmax(1fr, auto);
-    grid-auto-columns: minmax(1fr, auto); 
-    width: 100%;
-    width: 700px; 
-    height: 80px; 
-    flex: 0; 
+    gap: 0.2em;
+    grid-auto-rows: minmax(0.5fr, auto);
+    grid-auto-columns: minmax(0.5fr, auto); 
+    width: 35%;
+    height: 2px;
     margin: auto;
   }
 
 .wrapper > div {
     display: flex;
     background: #F0ABFC;
-    padding-bottom: 100%;
+    padding-bottom: 90%;
   }
   
 
@@ -39,7 +37,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 5vh;
 }
 .reset{
   background-color: #F0ABFC;

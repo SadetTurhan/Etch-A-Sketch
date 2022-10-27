@@ -15,4 +15,3 @@ function changeColor(event){
 
 let gridBoxList = document.querySelectorAll(".wrapper");
 gridBoxList.forEach(gridBox => {gridBox.addEventListener("mouseover", changeColor)});
-
