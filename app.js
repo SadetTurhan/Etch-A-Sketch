@@ -1,17 +1,9 @@
-const wrapper = document.querySelector('.wrapper');
+let board = document.querySelector(".board");
+board.style.gridTemplateColumns = 'repeat(16 , 1fr)';
+board.style.gridTemplateRows = 'repeat(16 , 1fr)';
 
-function createTable() {
-  for (let i = 0; i < 256; i += 1) {
-    const createDiv = document.createElement('div');
-    wrapper.appendChild(createDiv);
-  }
-}
-
-createTable();
-
-function changeColor(event){
-    event.target.style.backgroundColor = "yellow";
+for(let i = 0; i < 256;i++){
+  let square = document.createElement("div");
+  square.style.backgroundColor = "green";
+  board.insertAdjacentElement("beforeend", square);
 };
-
-let gridBoxList = document.querySelectorAll(".wrapper");
-gridBoxList.forEach(gridBox => {gridBox.addEventListener("mouseover", changeColor)});
