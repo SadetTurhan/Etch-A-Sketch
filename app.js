@@ -1,14 +1,15 @@
 let board = document.querySelector(".board");
 let squares = document.querySelectorAll("div");
 board.style.gridTemplateRows = `repeat(16 , 1fr)`;
-  board.style.gridTemplateColumns = `repeat(16 , 1fr)`;
+board.style.gridTemplateColumns = `repeat(16 , 1fr)`;
 let resetButton = document.querySelector(".reset");
 let blueButton = document.querySelector(".blue");
 let randomButton = document.querySelector(".random");
 let colorChoice = [];
 let Blue = ["blue"];
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
-
+let sizeButton = document.querySelector(".sizeButton");
+let boardSize = []
 
 function createBoard(){
   
@@ -25,11 +26,12 @@ for(let i = 0;i < 256; i++){
   function reset(){
     square.style.backgroundColor = "green"
   };
-
+  sizeButton.addEventListener("click",setSize);
   
 }};
 
 createBoard();
+
 
 function color(){
   if (colorChoice == randomColor){
@@ -50,3 +52,7 @@ function chooseRandom(){
   colorChoice.push(randomColor);
 }
 
+function setSize(){
+  let size = prompt();
+  boardSize.push(size);
+};
