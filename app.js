@@ -1,7 +1,4 @@
-let board = document.querySelector(".board");
-let squares = document.querySelectorAll("div");
-board.style.gridTemplateRows = `repeat(16 , 1fr)`;
-board.style.gridTemplateColumns = `repeat(16 , 1fr)`;
+
 let resetButton = document.querySelector(".reset");
 let blueButton = document.querySelector(".blue");
 let randomButton = document.querySelector(".random");
@@ -9,12 +6,15 @@ let colorChoice = [];
 let Blue = ["blue"];
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
 let sizeButton = document.querySelector(".sizeButton");
-let boardSize = []
+let boardSize = document.getElementById("sizeInput").value
 
 function createBoard(){
+  let board = document.querySelector(".board");
+  let squares = document.querySelectorAll("div");
+  board.style.gridTemplateRows = `repeat(${boardSize} , 1fr)`;
+  board.style.gridTemplateColumns = `repeat(${boardSize} , 1fr)`;
   
-  
-for(let i = 0;i < 256; i++){
+for(let i = 0;i < boardSize*boardSize; i++){
   let square = document.createElement("div");
   square.addEventListener("click",color);
   square.style.backgroundColor = "green";
@@ -26,7 +26,7 @@ for(let i = 0;i < 256; i++){
   function reset(){
     square.style.backgroundColor = "green"
   };
-  sizeButton.addEventListener("click",setSize);
+  sizeButton.addEventListener("click",createNewBoard);
   
 }};
 
@@ -52,7 +52,25 @@ function chooseRandom(){
   colorChoice.push(randomColor);
 }
 
-function setSize(){
-  let size = prompt();
-  boardSize.push(size);
-};
+
+
+function createNewBoard(){
+  
+  let board = document.querySelector(".board");
+  let squares = document.querySelectorAll("div");
+  board.style.gridTemplateRows = `repeat(${boardSize} , 1fr)`;
+  board.style.gridTemplateColumns = `repeat(${boardSize} , 1fr)`;
+  for(let i = 0;i < boardSize*boardSize; i++){
+    let square = document.createElement("div");
+    square.addEventListener("click",color);
+    square.style.backgroundColor = "green";
+    square.className = "grid";
+    blueButton.addEventListener("click",chooseBlue);
+    randomButton.addEventListener("click",chooseRandom);
+    board.insertAdjacentElement("beforeend",square);
+    resetButton.addEventListener("click", reset);
+    function reset(){
+      square.style.backgroundColor = "green"
+    };
+    
+}};
