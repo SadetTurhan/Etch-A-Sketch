@@ -9,8 +9,8 @@ h1{
   font-size: 6vh;
 }
 .board{
-  width: 30vw;
-  height: 60vh;
+  width: 50%;
+  height: 70vh;
   display: grid;
   margin-top: 3vh;
   margin-bottom: 2vh;
@@ -29,4 +29,15 @@ h1{
 
 button{
   width: 60px;
+}
+
+@media screen and (min-width: 401px) and (max-width: 960px){
+  .board{
+    width: 80%;
+    height: 70vh;
+    display: grid;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+  }
+  
 }
