@@ -65,7 +65,7 @@ input{
 }
 @media screen and (min-width: 401px) and (max-width: 960px){
   .board{
-    width: 80%;
+    width: 50%;
     height: 70vh;
     display: grid;
     margin-top: 3vh;
