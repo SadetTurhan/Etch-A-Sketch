@@ -73,4 +73,17 @@ input{
   }
   
 }
+#hoverbutton,
+#clickbutton{
+  width: 200px;
+  height: 30px;
+  border: 2px solid black;
+  background-color:lightgrey;
+  margin-top: 1%;
+  box-shadow: 2px 2px black;
+}
 
+#hoverbutton:hover,
+#clickbutton:hover{
+  background-color: #053d34d5;
+}
