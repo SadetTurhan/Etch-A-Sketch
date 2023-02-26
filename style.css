@@ -23,9 +23,10 @@ h1{
 }
 
 input{
-  width: 100px;
+  width: 200px;
   height: 30px;
   border: 2px solid black;
+  text-align: end;
 }
 .sizeButton{
   width: 100px;
@@ -48,17 +49,20 @@ input{
 .buttons{
   display:flex;
   justify-content: flex-start;
-  align-content: space-around;
-  border: 2px solid black;
+  align-content: space-between;
+  border: 4px solid black;
 }
 .random{
   background-color: #09b87d6e;
   width: 100px;
   height: 50px;
+  margin-right: 10px;
 }
 .blue{
   background-color: blue;
   width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .reset{
   background-color: red;
